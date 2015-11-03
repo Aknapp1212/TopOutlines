@@ -4,7 +4,8 @@ class OutlinesController < ApplicationController
   # GET /outlines
   # GET /outlines.json
   def index
-    @outlines = Outline.all
+    #@outlines = Outline.all (what exactly does this do?)
+    @outlines = current_user.outlines.all
   end
 
   # GET /outlines/1
@@ -14,7 +15,7 @@ class OutlinesController < ApplicationController
 
   # GET /outlines/new
   def new
-    @outline = Outline.new
+    @outline = current_user.outlines.new
   end
 
   # GET /outlines/1/edit
@@ -24,7 +25,7 @@ class OutlinesController < ApplicationController
   # POST /outlines
   # POST /outlines.json
   def create
-    @outline = Outline.new(outline_params)
+    @outline = current_user.outlines.new(outline_params)
 
     respond_to do |format|
       if @outline.save
