@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   resources :universities
-  resources :universities
   resources :outlines
   resources :lectures
   devise_for :users

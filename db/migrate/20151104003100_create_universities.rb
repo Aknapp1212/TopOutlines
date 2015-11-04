@@ -1,8 +1,7 @@
 class CreateUniversities < ActiveRecord::Migration
   def change
     create_table :universities do |t|
-      t.string :course_name
-      t.string :professor
+      t.string :name
 
       t.timestamps null: false
     end
