@@ -5,7 +5,9 @@ class OutlinesController < ApplicationController
   # GET /outlines.json
   def index
     #@outlines = Outline.all (what exactly does this do?)
-    @outlines = current_user.outlines.all
+    #@universities = University.all
+    @university = University.find(current_user.university_id)
+    @outlines = current_user.outlines
   end
 
   # GET /outlines/1

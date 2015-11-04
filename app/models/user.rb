@@ -12,5 +12,12 @@ class User < ActiveRecord::Base
   has_many :outlines
   belongs_to :university
 
+  def self.get_universities
+    collector = []
+    University.find_each do |u|
+      collector << [u.name, u.id]
+    end
+    collector
+  end
 end
 
