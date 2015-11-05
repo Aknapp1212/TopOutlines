@@ -1,4 +1,4 @@
-class OutlinesController < ApplicationController
+class DashboardController < ApplicationController
   before_action :set_outline, only: [:show, :edit, :update, :destroy]
 
   # GET /outlines

@@ -15,8 +15,12 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'bcrypt', '~> 3.1.7'
 gem 'devise'
 gem 'bootstrap-sass', '~> 3.3.5'
+<<<<<<< HEAD
 gem 'paperclip'
 gem 'stripe'
+=======
+# gem 'paperclip'
+>>>>>>> 04cb68a3bf07aa50b5d0734a8beadb8e5916f91f
 
 # Use Unicorn as the app server
 # gem 'unicorn'

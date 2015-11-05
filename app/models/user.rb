@@ -8,6 +8,16 @@ class User < ActiveRecord::Base
   # validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/
 
   has_many :lectures
+  has_many  :lectures, through: :university
   has_many :outlines
+  belongs_to :university
+
+  def self.get_universities
+    collector = []
+    University.find_each do |u|
+      collector << [u.name, u.id]
+    end
+    collector
+  end
 end
 
