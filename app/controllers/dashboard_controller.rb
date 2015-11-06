@@ -6,7 +6,7 @@ class DashboardController < ApplicationController
   def index
     #@outlines = Outline.all (what exactly does this do?)
     #@universities = University.all
-    @university = University.find(current_user.university_id)
+    #@university = University.find(current_user.university_id)
     @outlines = current_user.outlines
   end
 

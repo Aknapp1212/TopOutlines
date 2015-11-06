@@ -4,7 +4,8 @@ class UniversitiesController < ApplicationController
   # GET /universities
   # GET /universities.json
   def index
-    @universities = University.all
+    @university = University.find(current_user)
+    @outlines = current_user.outlines
   end
 
   # GET /universities/1
