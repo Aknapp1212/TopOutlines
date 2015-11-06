@@ -3,11 +3,12 @@ before_action :set_user, only: [:show, :edit, :update, :destroy]
 
 
 def create
-  @user = User.create( user_params )
+  @user = User.create(user_params)
 end
 
-def get
-  end
+def edit
+  @user = User.update(user_params)
+end
 
 private
 
